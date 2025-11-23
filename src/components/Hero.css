@@ -1,0 +1,73 @@
+.hero {
+    position: relative;
+    height: 85vh;
+    /* Taller for better impact */
+    min-height: 600px;
+    background: linear-gradient(135deg, #1B3A57 0%, #0F253A 100%);
+    /* Warmer Navy Gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-overlay {
+    display: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 900px;
+    /* Limit width for readability */
+}
+
+.hero-intro {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    opacity: 0.9;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    /* Use accent color for intro */
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    /* Larger on desktop */
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: white;
+    font-family: var(--font-heading);
+}
+
+.hero-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    opacity: 0.9;
+    font-family: var(--font-body);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        /* Slightly shorter on mobile */
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-intro {
+        font-size: 1rem;
+    }
+}

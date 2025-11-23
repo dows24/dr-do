@@ -1,0 +1,51 @@
+.qna-section {
+    background-color: white;
+}
+
+.qna-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.qna-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.qna-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qna-question h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.qna-toggle {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 300;
+}
+
+.qna-answer {
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    margin-top: 0;
+}
+
+.qna-item.open .qna-answer {
+    margin-top: 15px;
+}
+
+.qna-answer p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 8px;
+}

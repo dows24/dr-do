@@ -1,0 +1,110 @@
+:root {
+  /* Color Palette - Warmer & More Sophisticated */
+  --primary-color: #1B3A57;
+  /* Warmer, deep slate navy */
+  --secondary-color: #FFFFFF;
+  --bg-color: #F9F8F4;
+  /* Warm Ivory/Cream background */
+  --accent-color: #BFA16D;
+  /* Muted, elegant gold */
+  --text-primary: #2C2C2C;
+  /* Softer black */
+  --text-secondary: #5D5D5D;
+  /* Warm gray */
+
+  /* Typography */
+  --font-heading: 'Noto Serif KR', serif;
+  /* Elegant, authoritative */
+  --font-body: 'Noto Sans KR', sans-serif;
+  /* Clean, modern */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.7;
+  /* Increased line height for better readability */
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  /* Tighter tracking for headings */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  /* Limit width on desktop */
+  margin: 0 auto;
+  padding: 0 24px;
+  /* Slightly more padding */
+}
+
+.section {
+  padding: 60px 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  /* Start hidden */
+}
+
+/* Delay classes for staggered animations */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
