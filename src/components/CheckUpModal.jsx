@@ -44,11 +44,24 @@ const CheckUpModal = ({ isOpen, onClose }) => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
+    // Normalize date format: YYYYMMDD -> YYYY-MM-DD
+    const normalizeDateFormat = (dateStr) => {
+        // Remove any existing dashes
+        const cleaned = dateStr.replace(/-/g, '');
+        // If it's 8 digits (YYYYMMDD), format it
+        if (/^\d{8}$/.test(cleaned)) {
+            return `${cleaned.slice(0, 4)}-${cleaned.slice(4, 6)}-${cleaned.slice(6, 8)}`;
+        }
+        // Otherwise return as is
+        return dateStr;
+    };
+
     const handleLogin = async (e) => {
         e.preventDefault();
         setError('');
         try {
-            const found = await findPatient(formData.id, formData.name, formData.dob);
+            const normalizedDob = normalizeDateFormat(formData.dob);
+            const found = await findPatient(formData.id, formData.name, normalizedDob);
             if (found) {
                 setPatient(found);
                 setStep(2);
@@ -153,7 +166,7 @@ const CheckUpModal = ({ isOpen, onClose }) => {
                                 <input
                                     type="text"
                                     name="dob"
-                                    placeholder="예: 1980-01-01"
+                                    placeholder="예: 19800101 또는 1980-01-01"
                                     value={formData.dob}
                                     onChange={handleInputChange}
                                     required
@@ -163,7 +176,7 @@ const CheckUpModal = ({ isOpen, onClose }) => {
                             <button type="submit" className="modal-btn">확인</button>
                         </form>
                         <div className="mock-hint">
-                            <small>테스트용: 12345 / 김철수 / 1980-01-01</small>
+                            <small>테스트용: 12345 / 김철수 / 19800101</small>
                         </div>
                     </div>
                 )}
