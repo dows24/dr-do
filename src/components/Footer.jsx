@@ -14,7 +14,7 @@ const Footer = () => {
                         </div>
                         <div className="footer-copy">
                             <p>&copy; {new Date().getFullYear()} Dr. Do Woo-sung. All rights reserved.</p>
-                            <a href="/dr-do/admin" className="admin-link">Admin</a>
+                            <a href="#/admin" className="admin-link">Admin</a>
                         </div>
                     </div>
                 </div>
