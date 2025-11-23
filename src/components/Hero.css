@@ -26,14 +26,21 @@
 }
 
 .hero-intro {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-    opacity: 0.9;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    opacity: 0.85;
+    letter-spacing: 0.1em;
     color: var(--accent-color);
-    /* Use accent color for intro */
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
 }
 
 .hero-title {

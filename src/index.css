@@ -1,3 +1,6 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+
 :root {
   /* Color Palette - Warmer & More Sophisticated */
   --primary-color: #1B3A57;
@@ -12,11 +15,9 @@
   --text-secondary: #5D5D5D;
   /* Warm gray */
 
-  /* Typography */
+  /* Typography - Elegant serif for headings, modern sans for body */
   --font-heading: 'Noto Serif KR', serif;
-  /* Elegant, authoritative */
-  --font-body: 'Noto Sans KR', sans-serif;
-  /* Clean, modern */
+  --font-body: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
 * {

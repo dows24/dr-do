@@ -1,0 +1,41 @@
+.hero-btn {
+    margin-top: 2.5rem;
+    padding: 14px 28px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Glass effect base */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.5px;
+}
+
+.hero-btn::before {
+    content: '📊';
+    /* Simple icon */
+    font-size: 1.1rem;
+}
+
+.hero-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .hero-btn {
+        width: auto;
+        /* Don't force full width, keep it pill-shaped */
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+}
