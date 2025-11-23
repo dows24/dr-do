@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://dows.github.io/dr-do-branding",
+  "homepage": "https://dows24.github.io/dr-do",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
