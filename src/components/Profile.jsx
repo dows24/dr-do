@@ -1,5 +1,6 @@
 import React from 'react';
 import './Profile.css';
+import profileImg from '../assets/profile.png';
 
 const Profile = () => {
     return (
@@ -7,7 +8,7 @@ const Profile = () => {
             <div className="container">
                 <div className="profile-grid">
                     <div className="profile-image-wrapper fade-in-up">
-                        <img src="/assets/profile.png" alt="Dr. Do Woo-sung" className="profile-image" />
+                        <img src={profileImg} alt="Dr. Do Woo-sung" className="profile-image" />
                     </div>
                     <div className="profile-content fade-in-up delay-200">
                         <h2 className="section-title">Who am I</h2>
