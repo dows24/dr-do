@@ -38,6 +38,8 @@
     max-height: 500px;
     /* Limit height */
     object-fit: cover;
+    object-position: center 25%;
+    /* Center horizontally, show upper 3/4 (25% from top) */
     border-radius: 12px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     /* Softer, larger shadow */
